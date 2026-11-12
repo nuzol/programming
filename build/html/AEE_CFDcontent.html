@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numerical Methods and Introduction to CFD &mdash; METU AEE - CFD / HPC Fall 2026 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=76987652"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Computational Fluid Dynamics (CFD)" href="AEE_CFDintro.html" />
+    <link rel="prev" title="Numerical Methods, CFD, HPC" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            METU AEE - CFD / HPC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Numerical Methods and Introduction to CFD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#content-cfd">Content - CFD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-introduction">I. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ii-odes-and-pdes">II. ODEs and PDEs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iii-finite-difference-methods-fdm">III. Finite Difference Methods (FDM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iv-finite-volume-methods-fvm">IV. Finite Volume Methods (FVM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v-model-equations-and-applications">V. Model Equations and Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vi-cfd-and-aerospace-engineering-applications">VI. CFD and Aerospace Engineering Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_CFDintro.html">Computational Fluid Dynamics (CFD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_CFDintro.html#open-source-cfd-codes">Open Source CFD Codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_CFDintro.html#grid-generation-codes-software">Grid Generation Codes/Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_CFDintro.html#visualization-codes-software">Visualization Codes/Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_CFDintro.html#training-and-workshops">Training and Workshops:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_HPCcontent.html">Parallel Programming and High Performance Computing (HPC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_NumericalMethods.html">Numerical Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_Programming.html">Programming: Fortran, C, Python, Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_ExampleCodes.html">Programming: Example Codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AEE_References.html">References: Numerical Methods/CFD/HPC/Programming</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">METU AEE - CFD / HPC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Numerical Methods and Introduction to CFD</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/AEE_CFDcontent.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="numerical-methods-and-introduction-to-cfd">
+<h1>Numerical Methods and Introduction to CFD<a class="headerlink" href="#numerical-methods-and-introduction-to-cfd" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<hr class="docutils" />
+<section id="content-cfd">
+<h2>Content - CFD<a class="headerlink" href="#content-cfd" title="Link to this heading"></a></h2>
+</section>
+<section id="i-introduction">
+<h2>I. Introduction<a class="headerlink" href="#i-introduction" title="Link to this heading"></a></h2>
+<p>Computational Fluid Dynamics (CFD)</p>
+<p><em>Hesaplamalı Akışkanlar Dinamiği (HAD)</em></p>
+<ul class="simple">
+<li><p>Computational Fluid Dynamics (CFD) is a branch of fluid mechanics that uses numerical analysis and algorithms to solve and analyze problems that involve fluid flows.</p></li>
+<li><p>Computers are used to perform the calculations required to simulate the interaction of liquids and gases with surfaces defined by boundary conditions.</p></li>
+</ul>
+</section>
+<section id="ii-odes-and-pdes">
+<h2>II. ODEs and PDEs<a class="headerlink" href="#ii-odes-and-pdes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>ODEs: Ordinary Differential Equations</p></li>
+<li><p>PDEs: Partial Differential Equations</p></li>
+</ul>
+</section>
+<section id="iii-finite-difference-methods-fdm">
+<h2>III. Finite Difference Methods (FDM)<a class="headerlink" href="#iii-finite-difference-methods-fdm" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Finite Difference Methods (FDM) are numerical methods for solving differential equations by approximating derivatives with finite differences.</p></li>
+</ul>
+</section>
+<section id="iv-finite-volume-methods-fvm">
+<h2>IV. Finite Volume Methods (FVM)<a class="headerlink" href="#iv-finite-volume-methods-fvm" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Finite Volume Methods (FVM) are numerical methods for solving partial differential equations that conserve quantities through a control volume approach.</p></li>
+</ul>
+</section>
+<section id="v-model-equations-and-applications">
+<h2>V. Model Equations and Applications<a class="headerlink" href="#v-model-equations-and-applications" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Explicit Methods</p></li>
+<li><p>Implicit Methods</p></li>
+<li><p>Linear Algebra</p></li>
+<li><p>Computational Performance</p></li>
+</ul>
+</section>
+<section id="vi-cfd-and-aerospace-engineering-applications">
+<h2>VI. CFD and Aerospace Engineering Applications<a class="headerlink" href="#vi-cfd-and-aerospace-engineering-applications" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>CFD Simulations in Aerospace Engineering</p></li>
+<li><p>HPC usage in CFD</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Numerical Methods, CFD, HPC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="AEE_CFDintro.html" class="btn btn-neutral float-right" title="Computational Fluid Dynamics (CFD)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Nilay SEZER UZOL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
