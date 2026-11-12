@@ -1,0 +1,18 @@
+# Makefile.serial
+# Set the name of the source code file and the executable
+CC = gcc
+EXTRA_LIBS = 		# -lm
+SRC = hello.c
+CFLAGS = -o
+OUTPUT = hello
+
+OBJ =
+
+# A command to compile a serial program
+hello:
+	$(CC) $(EXTRA_LIBS) $(SRC) $(CFLAGS) $(OUTPUT) $(OBJ)
+
+# Delete the object/executable files 
+clean:
+	rm -f $(OBJ)
+	rm hello

@@ -1,0 +1,17 @@
+# Makefile.serial 
+# Set the name of the source code file and the executable 
+CC = gfortran
+EXTRA_LIBS = 		# -lm
+SRC = hello.f90
+CFLAGS = -o
+OUTPUT = helloF
+
+OBJ = 
+
+# A command to compile a serial program
+helloF: 
+	$(CC) $(EXTRA_LIBS) $(SRC) $(CFLAGS) $(OUTPUT) $(OBJ)
+
+# Delete the executable file 
+clean: 
+	rm -f $(OBJ) 

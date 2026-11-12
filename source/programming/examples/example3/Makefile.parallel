@@ -1,0 +1,17 @@
+# Makefile.parallel
+# Set the name of the source code file and the executable
+CC = mpicc
+EXTRA_LIBS = 		# -lm
+SRC = hellompi.c
+CFLAGS = -o
+OUTPUT = hellompi
+
+OBJ =
+
+# A command to compile a parallel program with MPI
+hellompi:
+	$(CC) $(EXTRA_LIBS) $(SRC) $(CFLAGS) $(OUTPUT) $(OBJ)
+
+# Delete the executable file
+clean:
+	rm -f $(OBJ)
