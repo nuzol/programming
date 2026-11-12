@@ -1,4 +1,4 @@
 # My Docs
-Programming/NumericalMethods/CFD/HPC Documentation
+CFD / HPC / Numerical Methods / Programming Documentation
 
 [View the published website](https://nuzol.github.io/programming/)
